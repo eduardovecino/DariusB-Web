@@ -2,30 +2,22 @@ import type { GetServerSideProps, InferGetServerSidePropsType } from "next";
 
 import Link from "next/link";
 import { useRouter } from "next/router";
-import LocaleSwitcher from "../components/locale-switcher";
+import LocaleSwitcher from "../../components/LocalSwitcher/locale-switcher";
+type ContactPageProps = InferGetServerSidePropsType<typeof getServerSideProps>;
 
-type GsspPageProps = InferGetServerSidePropsType<typeof getServerSideProps>;
-
-export default function GsspPage(props: GsspPageProps) {
+export default function ContactPage(props: ContactPageProps) {
   const router = useRouter();
   const { defaultLocale } = router;
-
+  console.log(props.locale);
   return (
     <div>
-      <h1>getServerSideProps page</h1>
+      <h1 >Contact</h1>
       <p>Current locale: {props.locale}</p>
       <p>Default locale: {defaultLocale}</p>
       <p>Configured locales: {JSON.stringify(props.locales)}</p>
 
       <LocaleSwitcher />
-
-      <Link href="/gsp">To getStaticProps page</Link>
-      <br />
-
-      <Link href="/gsp/first">To dynamic getStaticProps page</Link>
-      <br />
-
-      <Link href="/">To index page</Link>
+      <Link href="/">Menu</Link>
       <br />
     </div>
   );

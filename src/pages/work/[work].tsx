@@ -5,39 +5,33 @@ import type {
 } from "next";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import LocaleSwitcher from "../../components/locale-switcher";
+import LocaleSwitcher from "../../../components/LocalSwitcher/locale-switcher";
 
-type GspPageProps = InferGetStaticPropsType<typeof getStaticProps>;
+type WorkPageProps = InferGetStaticPropsType<typeof getStaticProps>;
 
-export default function GspPage(props: GspPageProps) {
+export default function WorkPage(props: WorkPageProps) {
   const router = useRouter();
   const { defaultLocale, isFallback, query } = router;
 
   if (isFallback) {
     return "Loading...";
   }
-
+  console.log(query);
   return (
+    
     <div>
-      <h1>getStaticProps page</h1>
-      <p>Current slug: {query.slug}</p>
-      <p>Current locale: {props.locale}</p>
-      <p>Default locale: {defaultLocale}</p>
-      <p>Configured locales: {JSON.stringify(props.locales)}</p>
-
+      <h1>{query.work}</h1>
       <LocaleSwitcher />
-
-      <Link href="/gsp">To getStaticProps page</Link>
-      <br />
-
-      <Link href="/gssp">To getServerSideProps page</Link>
-      <br />
-
-      <Link href="/">To index page</Link>
+      <Link href="/">Menu</Link>
       <br />
     </div>
   );
 }
+
+
+
+
+
 
 type Props = {
   locale?: string;
@@ -60,8 +54,10 @@ export const getStaticPaths: GetStaticPaths = ({ locales = [] }) => {
   const paths = [];
 
   for (const locale of locales) {
-    paths.push({ params: { slug: "first" }, locale });
-    paths.push({ params: { slug: "second" }, locale });
+    paths.push({ params: { work: "festival" }, locale });
+    paths.push({ params: { work: "whiteSheetII" }, locale });
+    paths.push({ params: { work: "fairelAmouralAeroport" }, locale });
+    paths.push({ params: { work: "salvandoLasDistancias" }, locale });
   }
 
   return {

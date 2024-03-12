@@ -1,31 +1,28 @@
 import type { GetStaticProps, InferGetStaticPropsType } from "next";
-
 import Link from "next/link";
 import { useRouter } from "next/router";
-import LocaleSwitcher from "../../components/locale-switcher";
+import LocaleSwitcher from "../../../components/LocalSwitcher/locale-switcher";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "react-i18next";
 
-type GspPageProps = InferGetStaticPropsType<typeof getStaticProps>;
 
-export default function GspPage(props: GspPageProps) {
+type WorkPageProps = InferGetStaticPropsType<typeof getStaticProps>;
+
+export default function WorkPage(props: WorkPageProps) {
   const router = useRouter();
   const { defaultLocale } = router;
+  const { t, i18n } = useTranslation("common");
 
   return (
     <div>
-      <h1>getStaticProps page</h1>
+      <h1>{t('work')}</h1>
       <p>Current locale: {props.locale}</p>
       <p>Default locale: {defaultLocale}</p>
-      <p>Configured locales: {JSON.stringify(props.locales)}</p>
+      <p>Configured locales: {JSON.stringify(props.locale)}</p>
 
       <LocaleSwitcher />
 
-      <Link href="/gsp/first">To dynamic getStaticProps page</Link>
-      <br />
-
-      <Link href="/gssp">To getServerSideProps page</Link>
-      <br />
-
-      <Link href="/">To index page</Link>
+      <Link href="/">Menu</Link>
       <br />
     </div>
   );
@@ -44,6 +41,10 @@ export const getStaticProps: GetStaticProps<Props> = async ({
     props: {
       locale,
       locales,
+      ...(await serverSideTranslations( (locale || 'en'), ["common"]))
     },
   };
 };
+
+
+
