@@ -50,7 +50,6 @@ function WorkPage(props: WorkPageProps) {
       <LocaleSwitcher></LocaleSwitcher>
       <h1>{t(work.title)}</h1>
       <p>{t(work.text)}</p>
-      {/* <MenuComponentPage/> */}
       {/* Render other work details */}
     </div>
   );

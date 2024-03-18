@@ -29,22 +29,19 @@ export default function LocaleSwitcher() {
       router.events.off('routeChangeComplete', handleRouteChange);
     };
   }, [activeLocale, locales]);
-
   return (
     <div className={styles.positionRight}>
-      <ul className={styles.OptionList}>
         {locales && locales.map(locale => (
-          <li key={locale}>
+          <li className={styles.OptionList} key={locale}>
             <button
               type="button"
               onClick={() => handleChangeLanguage(locale)}
-              disabled={locale === activeLocale || isDisabled}
-            >
+              disabled={false}
+              >
               {locale}
             </button>
           </li>
         ))}
-      </ul>
     </div>
   );
 }
