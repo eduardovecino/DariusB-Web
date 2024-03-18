@@ -15,15 +15,7 @@ export default function WorkPage(props: WorkPageProps) {
 
   return (
     <div>
-      <h1>{t('work')}</h1>
-      <p>Current locale: {props.locale}</p>
-      <p>Default locale: {defaultLocale}</p>
-      <p>Configured locales: {JSON.stringify(props.locale)}</p>
-
-      <LocaleSwitcher />
-
-      <Link href="/">Menu</Link>
-      <br />
+      hola
     </div>
   );
 }
@@ -35,7 +27,7 @@ type Props = {
 
 export const getStaticProps: GetStaticProps<Props> = async ({
   locale,
-  locales,
+  locales
 }) => {
   return {
     props: {

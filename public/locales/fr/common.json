@@ -1,4 +1,41 @@
 {
   "welcome": "Bienvenue sur mon blog!",
-  "work": "Travail"
+  "works" : {
+    "work0" : {
+      "title" : "Festival",
+      "text": "FR - Lorem Ipsum"
+    },
+    "work1" : {
+      "title" : "Feuille blanche II",
+      "text": "FR - Lorem Ipsum"
+    },
+    "work2" : {
+      "title" : "Faire l'Amour à l'Aéroport",
+      "text": "FR - Lorem Ipsum"
+    },
+    "work3" : {
+      "title" : "Salvando las Distancias",
+      "text": "FR - Lorem Ipsum"
+    },
+    "work4" : {
+      "title" : "Bandes de jeunes en quête d'ennuis habillés par des N*ke et des Ad*das",
+      "text": "FR - Lorem Ipsum"
+    },
+    "work5" : {
+      "title" : "Vestiges de la réalité",
+      "text": "FR - Lorem Ipsum"
+    },
+    "work6" : {
+      "title" : "Rêve profond",
+      "text": "FR - Lorem Ipsum"
+    },
+    "work7" : {
+      "title" : "Escalas",
+      "text": "FR - Lorem Ipsum"
+    },
+    "work8" : {
+      "title" : "Feuille blanche I",
+      "text": "FR - Lorem Ipsum"
+    }
+  }
 }

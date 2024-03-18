@@ -1,0 +1,46 @@
+
+.activeLocale {   
+   text-decoration: underline;
+}
+
+.positionRight {
+    position: absolute;
+    right: 0;
+    top:  1em;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-transform: uppercase;
+    padding-right: 1rem;
+    display: flex;
+    gap: calc(1rem / 2);
+    flex-direction: column;
+    &.activated {   
+        text-decoration: underline;
+     }
+}
+
+.positionRight a {
+    text-decoration: none;
+    color: black;
+    padding: calc(1rem / 2); ;
+}
+
+.positionRight a:hover {
+    font-weight: 800;
+    color: white !important;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.positionRight a:visited {
+    color: black;
+}
+
+.positionRight a:active {
+    font-weight: 800;
+    color: black !important;
+}
+
+.OptionList {
+    list-style: none;
+}

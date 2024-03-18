@@ -7,6 +7,7 @@ import fr from '../../public/locales/fr/common.json';
 import es from '../../public/locales/es/common.json';
 import en from '../../public/locales/en/common.json';
 import { appWithTranslation } from 'next-i18next';
+require('../styles/main.css');
 
 // Initialize i18next outside the component
 i18next

@@ -1,4 +1,41 @@
 {
   "welcome": "Welcome to my blog!",
-  "work": "Work"
+  "works": {
+    "work0": {
+      "title": "Festival",
+      "text": "En - Lorem Ipsum - 0"
+    },
+    "work1": {
+      "title": "White Sheet II",
+      "text": "En - Lorem Ipsum - 1"
+    },
+    "work2": {
+      "title": "Making Love at the Airport",
+      "text": "En - Lorem Ipsum - 3"
+    },
+    "work3": {
+      "title": "Bridging the Gap",
+      "text": "En - Lorem Ipsum"
+    },
+    "work4": {
+      "title": "Bands of young kids seeking trouble dressed by N*ke and Ad*das",
+      "text": "En - Lorem Ipsum"
+    },
+    "work5": {
+      "title": "Remains of Reality",
+      "text": "En - Lorem Ipsum"
+    },
+    "work6": {
+      "title": "Deep Dream",
+      "text": "En - Lorem Ipsum"
+    },
+    "work7": {
+      "title": "Escalas",
+      "text": "En - Lorem Ipsum"
+    },
+    "work8": {
+      "title": "White Sheet I",
+      "text": "En - Lorem Ipsum"
+    }
+  }
 }

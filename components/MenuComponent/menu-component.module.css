@@ -1,0 +1,33 @@
+.title {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.OptionList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.OptionList a {
+    text-decoration: none;
+    color: black;
+    padding: calc(1rem / 2); ;
+    font-size: 3rem;
+    font-weight: 800;
+    padding: 1rem;
+}
+
+.div {
+    font-weight: 800;
+    color: white !important;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    background-color: aqua;
+}

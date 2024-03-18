@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import LocaleSwitcher from "../../components/LocalSwitcher/locale-switcher";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
-import MenuPage from "../../components/MenuComponent/menu-component";
+import MenuComponentPage from "../../components/MenuComponent/menu-component";
 
 export default function IndexPage() {
   const { locale, defaultLocale, events } = useRouter();
@@ -12,11 +12,8 @@ export default function IndexPage() {
 
   return (
     <div>
-      <LocaleSwitcher />
-      <br/>
-      <h1>{t('welcome')}</h1>
-      <MenuPage/>
-    </div>
-  );
+      <LocaleSwitcher/>
+      <MenuComponentPage/>
+    </div>);
 }
 
