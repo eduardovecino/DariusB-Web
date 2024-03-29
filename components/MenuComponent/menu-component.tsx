@@ -21,7 +21,7 @@ function MenuComponentPage() {
 
   return (
     <div>
-      <h3 className={styles.title}>Darius Bogdanowicz</h3>
+      <h3 className={styles.title} style={{position:'fixed'}}>Darius Bogdanowicz</h3>
       <div className={styles.OptionList}>
         {Object.values(works).map((work, index) => (
           <button className={styles.buttonStyle}key={index} onClick={() => handleWorkClick(index)}>

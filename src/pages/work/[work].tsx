@@ -1,11 +1,11 @@
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
-import styles from './menu-component.module.css'
+import styles from './work.module.css'
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
 import LocaleSwitcher from '../../../components/LocalSwitcher/locale-switcher';
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
-import MenuComponentPage from '../../../components/MenuComponent/menu-component';
+
 type WorkPageProps = InferGetServerSidePropsType<typeof getServerSideProps>;
 
 function WorkPage(props: WorkPageProps) {
@@ -46,11 +46,24 @@ function WorkPage(props: WorkPageProps) {
     }
 
   return (
-    <div>
+    <div style={{height: '100%', paddingLeft:'12px', paddingRight:'12px'}}>
       <LocaleSwitcher></LocaleSwitcher>
-      <h1>{t(work.title)}</h1>
-      <p>{t(work.text)}</p>
-      {/* Render other work details */}
+      <a className={styles.title}> Darius Bogdanowicz</a>
+      <div style={{ display:'flex', overflow:'hidden' }}>
+        <div className={styles.column}>
+          <div className={styles.content}>
+            <h3 className={styles.titleHead}>{t(work.title)}</h3>
+            <p> {t(work.text)}</p>
+          </div>
+        </div>
+        <div className={styles.column}>
+            <div className={styles.content}>
+              <div  className={styles.boxImageApp} style={{paddingTop: '40px', paddingBottom: '80px', alignItems: 'flex-start'}}>
+                <iframe src="https://player.vimeo.com/video/182263841?h=b391f90c78" width="640" height="360" ></iframe>
+              </div>
+            </div>
+          </div>
+         </div>
     </div>
   );
 }

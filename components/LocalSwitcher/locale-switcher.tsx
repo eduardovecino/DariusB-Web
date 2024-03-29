@@ -3,15 +3,18 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import styles from './locale-switcher.module.css'
+import { changeLanguage } from "i18next";
 
 export default function LocaleSwitcher() {
   const router = useRouter();
   const { locales, locale: activeLocale } = router;
   const { t, i18n } = useTranslation('common');
   const [isDisabled, setIsDisabled] = useState<boolean>(false);
+  let nL: string;
 
   const handleChangeLanguage = (newLocale: string) => {
     i18n.changeLanguage(newLocale);
+    nL = newLocale;
   };
 
   useEffect(() => {
@@ -20,6 +23,7 @@ export default function LocaleSwitcher() {
       if (!locales?.includes(newLocal)) {
         newLocal = activeLocale;
       }
+   
       setIsDisabled(newLocal === activeLocale);
     };
 
@@ -29,19 +33,23 @@ export default function LocaleSwitcher() {
       router.events.off('routeChangeComplete', handleRouteChange);
     };
   }, [activeLocale, locales]);
+
+  function  setStatus(e:any) {
+    console.log('setStatus' + e)
+  }
   return (
     <div className={styles.positionRight}>
         {locales && locales.map(locale => (
-          <li className={styles.OptionList} key={locale}>
+          <div key={locale}>
             <button
+              className={(nL === locale) ? 'activeButton' : '' }
               type="button"
-              onClick={() => handleChangeLanguage(locale)}
-              disabled={false}
-              >
+              onClick={(e) => [e.preventDefault(), setStatus(e), handleChangeLanguage(locale)]}
+              disabled={false}>
               {locale}
             </button>
-          </li>
-        ))}
+          </div>
+        )) }
     </div>
   );
 }

@@ -4,7 +4,7 @@
 }
 
 .positionRight {
-    position: absolute;
+    position: fixed;
     right: 0;
     top:  1em;
     padding-left: 1rem;
@@ -14,33 +14,41 @@
     display: flex;
     gap: calc(1rem / 2);
     flex-direction: column;
-    &.activated {   
+    &.activeLocale {   
         text-decoration: underline;
      }
 }
 
-.positionRight a {
+.positionRight button {
     text-decoration: none;
     color: black;
-    padding: calc(1rem / 2); ;
+    padding: calc(1rem / 2);
+    border: none;
+    text-transform: uppercase;
+    background: none;
 }
 
-.positionRight a:hover {
+.positionRight button:hover {
     font-weight: 800;
     color: white !important;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
 }
 
-.positionRight a:visited {
+.positionRight button:visited {
     color: black;
 }
 
-.positionRight a:active {
+.positionRight button:active {
     font-weight: 800;
     color: black !important;
+    text-decoration: underline;
 }
 
-.OptionList {
-    list-style: none;
+.activeButton {
+    font-weight: 800;
+    color: black !important;
+    text-decoration: underline;
 }
+
+
