@@ -45,10 +45,14 @@ function WorkPage(props: WorkPageProps) {
       return <div>Loading...</div>; // Render loading state if work data is not available yet
     }
 
+    const goHome = () => {
+      router.push('/'); // Navigate to the root route
+    };
+    
   return (
     <div style={{height: '100%', paddingLeft:'12px', paddingRight:'12px'}}>
       <LocaleSwitcher></LocaleSwitcher>
-      <a className={styles.title}> Darius Bogdanowicz</a>
+      <a className={styles.title} onClick={goHome}>{t(`author`)}</a>
       <div style={{ display:'flex', overflow:'hidden' }}>
         <div className={styles.column}>
           <div className={styles.content}>
