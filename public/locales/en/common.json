@@ -29,32 +29,8 @@
       "picture": "sld.png"
     },
     "work4": {
-      "id": 4,
-      "title": "Bands of young kids seeking trouble dressed by N*ke and Ad*das",
-      "text": "En - Lorem Ipsum",
-      "picture": "Festival.jpeg"
-    },
-    "work5": {
       "id": 5,
       "title": "Remains of Reality",
-      "text": "En - Lorem Ipsum",
-      "picture": "sld.png"
-    },
-    "work6": {
-      "id": 6,
-      "title": "Deep Dream",
-      "text": "En - Lorem Ipsum",
-      "picture": "Festival.jpeg"
-    },
-    "work7": {
-      "id": 7,
-      "title": "Escalas",
-      "text": "En - Lorem Ipsum",
-      "picture": "sld.png"
-    },
-    "work8": {
-      "id": 8,
-      "title": "White Sheet I",
       "text": "En - Lorem Ipsum",
       "picture": "Festival.jpeg"
     }

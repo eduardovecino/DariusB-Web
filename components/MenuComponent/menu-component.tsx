@@ -60,10 +60,20 @@ function MenuComponentPage() {
               {t(`works.work${index}.title`)}
           </button>
         ))}
-        <button className={styles.buttonSimpleStyle} onClick={() => redirectToContact()}>{t(`contact`)}</button>
-        <button className={styles.buttonSimpleStyle} onClick={() => redirectToAbout()}>{t(`about`)}</button>
 
       </div>
+      <div className={styles.footerButtonGroup}>
+        <button className={styles.footerButton} onClick={() => redirectToAbout()}>{t(`about`)}</button>
+        <button className={styles.footerButton} onClick={() => redirectToContact()}>{t(`contact`)}</button>
+      </div>
+      <footer className={styles.footer}>
+        <div className={styles.footerContent}>
+          <div className={styles.animatedText}>
+            <span>👉🏻 Buy my the New Book "Festival". A novel winner of the IV Antonio Gala Prize </span>
+            <span>👉🏻 Buy my the New Book "Festival". A novel winner of the IV Antonio Gala Prize </span>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
