@@ -47,7 +47,7 @@ function MenuComponentPage() {
   };
 
   return (
-    <div style={bgChange}>
+    <div style={bgChange} className={styles.bg}>
       <h3 className={styles.title} onClick={goHome} style={{position:'fixed'}}>{t(`author`)}</h3>
       <div className={styles.OptionList}>
         {Object.values(works).map((work, index) => (
@@ -60,20 +60,21 @@ function MenuComponentPage() {
               {t(`works.work${index}.title`)}
           </button>
         ))}
-
       </div>
+     <div className={styles.footerGroup}>
       <div className={styles.footerButtonGroup}>
-        <button className={styles.footerButton} onClick={() => redirectToAbout()}>{t(`about`)}</button>
-        <button className={styles.footerButton} onClick={() => redirectToContact()}>{t(`contact`)}</button>
-      </div>
-      <footer className={styles.footer}>
-        <div className={styles.footerContent}>
-          <div className={styles.animatedText}>
-            <span>👉🏻 Buy my the New Book "Festival". A novel winner of the IV Antonio Gala Prize </span>
-            <span>👉🏻 Buy my the New Book "Festival". A novel winner of the IV Antonio Gala Prize </span>
-          </div>
+          <button className={styles.footerButton} onClick={() => redirectToAbout()}>{t(`about`)}</button>
+          <button className={styles.footerButton} onClick={() => redirectToContact()}>{t(`contact`)}</button>
         </div>
-      </footer>
+        <footer className={styles.footer}>
+          <div className={styles.footerContent}>
+            <div className={styles.animatedText}>
+            <span>{t(`news`)} </span>
+            <span>{t(`news`)} </span>
+            </div>
+          </div>
+        </footer>
+     </div>
     </div>
   );
 }
