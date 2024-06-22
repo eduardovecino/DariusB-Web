@@ -25,18 +25,56 @@ type Props = {
   locales?: string[];
 };
 
-export const getStaticProps: GetStaticProps<Props> = async ({
-  locale,
-  locales
-}) => {
+// export const getStaticProps: GetStaticProps<Props> = async ({
+//   locale,
+//   locales
+// }) => {
+//   return {
+//     props: {
+//       locale,
+//       locales,
+//       ...(await serverSideTranslations( (locale || 'en'), ["common"]))
+//     },
+//   };
+// };
+
+
+
+const fetchSomeData = async () => {
+  // Simulate fetching data
+  // Replace this with your actual fetch logic
   return {
-    props: {
-      locale,
-      locales,
-      ...(await serverSideTranslations( (locale || 'en'), ["common"]))
-    },
+    locale: undefined, // Simulate a potentially undefined value
+    // other data
   };
 };
+
+
+export async function getStaticProps() {
+  
+  try {
+    // Fetch your data here
+    const data = await fetchSomeData(); // Replace with your actual data fetching logic
+
+    // Ensure `locale` is not `undefined`
+    const locale = data.locale !== undefined ? data.locale : null;
+
+    return {
+      props: {
+        locale,
+        // other props
+      },
+    };
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    return {
+      props: {
+        locale: null, // Set default value in case of error
+        // other props with default values if necessary
+      },
+    };
+  }
+}
 
 
 
