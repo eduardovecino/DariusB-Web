@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import styles from './work.module.css'
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
-import LocaleSwitcher from '../../../components/LocalSwitcher/locale-switcher';
+import LocaleSwitcher from '../../components/LocalSwitcher/locale-switcher';
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 
 type WorkPageProps = InferGetServerSidePropsType<typeof getServerSideProps>;

@@ -2,7 +2,7 @@ import type { GetServerSideProps, InferGetServerSidePropsType } from "next";
 
 import Link from "next/link";
 import { useRouter } from "next/router";
-import LocaleSwitcher from "../../components/LocalSwitcher/locale-switcher";
+import LocaleSwitcher from '../components/LocalSwitcher/locale-switcher';
 type AboutPageProps = InferGetServerSidePropsType<typeof getServerSideProps>;
 
 export default function AboutPage(props: AboutPageProps) {

@@ -4,9 +4,9 @@ import React, { useState } from 'react';
 import styles from './menu-component.module.css'
 import { useTranslation } from 'react-i18next';
 import jsonSize from '../../public/locales/en/common.json'
-import picture from '../../src/assets/img/Festival.jpeg'
+import picture from '../../assets/img/Festival.jpeg'
 
-import picture2 from '../../public/img/Festival.jpeg'
+import picture2 from '../../assets/img/Festival.jpeg'
 
 
 
@@ -39,7 +39,7 @@ function MenuComponentPage() {
 
 
   async function handleMouseEnter(work:any, index:any) {
-    const pictureBackground = (await import( `../../public/img/${work.picture}`)); // this is async
+    const pictureBackground = (await import( `../../assets/img/${work.picture}`)); // this is async
     setBgChange({ 
       backgroundImage: `url(${pictureBackground.default.src})`,
     })
