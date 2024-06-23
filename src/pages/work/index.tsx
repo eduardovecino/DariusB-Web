@@ -1,7 +1,7 @@
 import type { GetStaticProps, InferGetStaticPropsType } from "next";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import LocaleSwitcher from "../../../components/LocalSwitcher/locale-switcher";
+import LocaleSwitcher from "../../components/LocalSwitcher/locale-switcher";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "react-i18next";
 

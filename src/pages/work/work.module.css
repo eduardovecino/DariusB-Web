@@ -12,8 +12,8 @@
   
   .content {
     width: calc(100% - 21px);
-    height: 100%;
-    /* margin: 20px auto; */
+    height: -webkit-fill-available;
+    margin: 20px auto;
     line-height: 1.5em;
     overflow-x: hidden;
     -ms-overflow-style: none;  /* IE and Edge */
@@ -107,4 +107,5 @@
   margin: 0;
   padding-top: calc(1em/2);
   padding-bottom: calc(1em/2);
+  line-height: 0.79em;
 }

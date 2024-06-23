@@ -1,27 +1,66 @@
 {
+  "name": "dariusbogdanowicz-website",
+  "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start",
-    "compile": "formatjs compile"
-  },
   "dependencies": {
-    "i18next": "^23.10.0",
-    "next": "latest",
-    "next-i18next": "^15.2.0",
-    "primereact": "^10.5.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-i18next": "^14.0.5",
-    "react-intl": "^6.6.2",
-    "react-local-translations": "^7.1.1",
-    "react-router-dom": "^6.22.2"
+      "i18next": "^23.10.0",
+      "next": "latest",
+      "next-i18next": "^15.2.0",
+      "primereact": "^10.5.1",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "react-i18next": "^14.0.5",
+      "react-intl": "^6.6.2",
+      "react-local-translations": "^7.1.1",
+      "react-router-dom": "^6.22.2",
+      "react-scripts": "5.0.1",
+      "web-vitals": "^2.1.4"
+    },  
+  "scripts": {
+    "dev": "next dev",
+    "next-build": "next build",
+    "next-start": "next start",
+    "compile": "formatjs compile",
+    "prod_start": "NODE_ENV=production node server.js",
+    "build": "next build",    
+    "export": "next build && next export",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "start": "ts-node -r tsconfig-paths/register src/main.ts",
+    "start:dev": "concurrently \"wait-on dist/main.js && nodemon\" \"tsc -w -p tsconfig.json\"",
+    "start:debug": "nodemon --config nodemon-debug.json",
+    "prestart:prod": "rimraf dist && npm run build",
+    "start:prod": "node dist/src/main.js"
   },
   "devDependencies": {
     "@types/node": "^18.11.5",
     "@types/react": "^18.0.23",
     "@types/react-dom": "^18.0.7",
-    "typescript": "^4.8.4"
+    "typescript": "^4.8.4",
+    "rimraf": "^3.0.2",
+    "concurrently": "^7.0.0",
+    "wait-on": "^6.0.1",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.4.0",
+    "tsconfig-paths": "^3.11.0",
+    "prettier": "^2.4.1"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
+

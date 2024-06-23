@@ -1,3 +1,64 @@
+// {
+//   "compilerOptions": {
+//     "target": "es5",
+//     "lib": ["dom", "dom.iterable", "esnext"],
+//     "allowJs": true,
+//     "skipLibCheck": true,
+//     "strict": true,
+//     "forceConsistentCasingInFileNames": true,
+//     "esModuleInterop": true,
+//     "module": "esnext",
+//     // "module": "commonjs",
+//     "moduleResolution": "node",
+//     "resolveJsonModule": true,
+//     "isolatedModules": true,
+//     "jsx": "preserve",
+//     "incremental": true,
+//     "noImplicitAny": false,
+//     "removeComments": true,
+//     "allowSyntheticDefaultImports": true,
+//     "emitDecoratorMetadata": true,
+//     "experimentalDecorators": true,
+//     // "target": "es6",
+//     "sourceMap": true,
+//     "rootDir": ".",
+//     "baseUrl": "./src",
+//     "outDir": "./dist",
+//     "noEmit": false,
+//     "emitDeclarationOnly": true,
+//     "declaration": true,
+//     "declarationMap": true
+//   },
+//   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "next.config.js"],
+//   "exclude": ["node_modules", "dist", "src/**/*.spec.ts", "src/**/__test__/*"]
+// // }
+// {
+//   "compilerOptions": {
+//     "target": "esnext",
+//     "module": "esnext",
+//     "jsx": "preserve",
+//     "lib": ["dom", "esnext"],
+//     "esModuleInterop": true,
+//     "skipLibCheck": true,
+//     "allowJs": true,
+//     "strict": true,
+//     "forceConsistentCasingInFileNames": true,
+//     "noEmit": true,
+//     "strictNullChecks": false,
+//     "moduleResolution": "node",
+//     "resolveJsonModule": true,
+//     "isolatedModules": true,
+//     "incremental": true,
+//     "baseUrl": "./",
+//     "paths": {
+//       "@/components/*": ["src/components/*"],
+//       "@/assets/*": ["src/assets/*"]
+//     }
+//   },
+//   "include": ["src/**/*.ts", "src/**/*.tsx", "next-env.d.ts"],
+//   "exclude": ["node_modules"]
+// }
+
 {
   "compilerOptions": {
     "target": "es5",
@@ -15,6 +76,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "next.config.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }

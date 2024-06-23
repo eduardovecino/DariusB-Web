@@ -3,9 +3,9 @@ import { FormattedMessage, IntlProvider } from "react-intl";
 import { PrimeReactProvider } from "primereact/api";
 import i18next from "i18next";
 import { initReactI18next, useTranslation } from "react-i18next";
-import fr from '../../public/locales/fr/common.json';
-import es from '../../public/locales/es/common.json';
-import en from '../../public/locales/en/common.json';
+import fr from '../public/locales/fr/common.json';
+import es from '../public/locales/es/common.json';
+import en from '../public/locales/en/common.json';
 import { appWithTranslation } from 'next-i18next';
 require('../styles/main.css');
 
